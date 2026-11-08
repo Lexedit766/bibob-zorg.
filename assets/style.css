@@ -133,3 +133,17 @@ footer.site .wrap{display:flex;flex-wrap:wrap;gap:8px 28px;justify-content:space
 footer.site a{color:inherit;text-decoration:none}
 footer.site a:hover{text-decoration:underline}
 footer.site .disclaimer{flex-basis:100%;margin-top:6px;max-width:70ch}
+
+/* checklist afdrukken */
+@media print{
+  header.site,footer.site,#contact,.marge,.faq,.cta,nav{display:none !important}
+  body{font-size:12pt;background:#fff}
+  .artikelpagina{display:block;padding:0}
+  .artikelpagina .body > *:not(.checklist):not(h1){display:none}
+  .checklist{background:none;border:1px solid #999;padding:16px}
+  .checklist li::before{content:"\2610  ";}
+}
+.checklist li{list-style:none}
+.checklist li::before{content:"\2610  ";color:var(--green)}
+.checklist ul{padding-left:0}
+@media (max-width:860px){.artikelpagina .marge{order:2;border-top:1px solid var(--rule);padding-top:24px}}
