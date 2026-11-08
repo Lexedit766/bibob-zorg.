@@ -9,7 +9,7 @@ TODAY = "2026-11-08"
 NAV = [
     ("bibob-onderzoek.html", "Bibob-onderzoek"),
     ("bibob-vragenformulier.html", "Vragenformulier"),
-    ("negatief-bibob-advies.html", "Zienswijze"),
+    ("kennisbank.html", "Kennisbank"),
     ("./#diensten", "Diensten"),
     ("./#contact", "Contact"),
 ]
@@ -35,7 +35,7 @@ def header(current):
 </header>'''
 
 def footer(current):
-    links = " &nbsp;·&nbsp; ".join(f'<a href="{h}">{t}</a>' for h, t in KENNIS if h != current)
+    links = " &nbsp;·&nbsp; ".join(f'<a href="{h}">{t}</a>' for h, t in [("kennisbank.html","Kennisbank"),("bibob-onderzoek.html","Bibob-onderzoek"),("negatief-bibob-advies.html","Zienswijze")] if h != current)
     return f'''<footer class="site">
   <div class="wrap">
     <span>© 2026 mr. J. Smit, jurist — Bibob voor zorgaanbieders</span>
