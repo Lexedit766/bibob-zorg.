@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://lexedit766.github.io/bibob-zorg./sitemap.xml
